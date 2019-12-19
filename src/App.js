@@ -10,6 +10,7 @@ function App() {
         <CurrencyCard name="USD" value="1.1117"/>
         <CurrencyCard name="USD" value="1.1117"/>
     </>)
+    
     return (
         <div className="app">
             <Layout
