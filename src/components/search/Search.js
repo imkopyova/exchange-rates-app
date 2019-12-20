@@ -5,15 +5,9 @@ import { getRatesBySymbols } from "../../api";
 export const Search = props => {
     const [ value, setValue ] = useState("");
 
-    const handleSearch = symbol => {
-        const result = getRatesBySymbols([symbol.toUpperCase()])
-            .then(res => console.log(res))
-            .catch(error => console.log(error));
-    };
-
     const handleSubmit = event => {
         event.preventDefault();
-        handleSearch(value);
+        props.handleSearch(value.toUpperCase());
     };
 
     return (
